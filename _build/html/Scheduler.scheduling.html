@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>scheduling package &#8212; Scheduler 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="utils package" href="Scheduler.utils.html" />
+    <link rel="prev" title="notifiers package" href="Scheduler.notification.notifiers.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/logo.png"></span>
+          Scheduler</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Scheduler.html">Scheduler package</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">scheduling package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-ScheduleConfig">ScheduleConfig module</a></li>
+<li><a class="reference internal" href="#module-scheduling.Scheduler">Scheduler module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Scheduler.notification.notifiers.html" title="Previous Chapter: notifiers package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; notifiers package</span>
+    </a>
+  </li>
+  <li>
+    <a href="Scheduler.utils.html" title="Next Chapter: utils package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">utils package &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/Scheduler.scheduling.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="scheduling-package">
+<h1>scheduling package<a class="headerlink" href="#scheduling-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ScheduleConfig">
+<span id="scheduleconfig-module"></span><h2>ScheduleConfig module<a class="headerlink" href="#module-ScheduleConfig" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ScheduleConfig.ScheduleConfig">
+<em class="property">class </em><code class="descclassname">ScheduleConfig.</code><code class="descname">ScheduleConfig</code><span class="sig-paren">(</span><em>every: int = None</em>, <em>time_unit: str = 'hour'</em>, <em>at: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#ScheduleConfig.ScheduleConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ScheduleConfig.ScheduleConfig.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>every: int = None</em>, <em>time_unit: str = 'hour'</em>, <em>at: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#ScheduleConfig.ScheduleConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an immutable instance of schedule configurations which will be used to change scheduler behaviour
+at runtime by modifying <code class="docutils literal notranslate"><span class="pre">every</span></code> or <code class="docutils literal notranslate"><span class="pre">at</span></code> and <code class="docutils literal notranslate"><span class="pre">time_unit</span></code>.</p>
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">Providing <cite>every</cite> and <cite>at</cite> both the value will prevent scheduling a job due to conflicts with time units.
+User can also schedule a job by only providing the time unit. By default a job will execute once per time unit.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>every</strong> (<em>int</em>) – This numeric value represents number of times a job will execute per time unit.
+Time unit are conditionally valid depending on this value.</li>
+<li><strong>time_unit</strong> (<em>str</em>) – <p>This value indicates whether a job should run number of times per unit or at per unit.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<ul class="last">
+<li>in case the value for every is provided then, - seconds, minutes, hours, day (plurals)</li>
+<li>in case only time unit provided then, - second, minute, hour, day (singular)</li>
+<li><dl class="first docutils">
+<dt>in case the time string for at is provided then, day, monday, tuesday, wednesday,</dt>
+<dd>thursday, friday, saturday, sunday</dd>
+</dl>
+</li>
+</ul>
+</div>
+</li>
+<li><strong>at</strong> (<em>str</em>) – a string represents at specified time a job will execute on
+per time unit. If a value provided for <cite>every</cite> then avoid providing a value for this field.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ScheduleConfig.ScheduleConfig.at">
+<code class="descname">at</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ScheduleConfig.ScheduleConfig.at" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the clock time string from current instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">clock time string from 00:00 to 23:59</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ScheduleConfig.ScheduleConfig.every">
+<code class="descname">every</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#ScheduleConfig.ScheduleConfig.every" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves occurrence part from current instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">number of times a job will execute per time unit</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ScheduleConfig.ScheduleConfig.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ScheduleConfig.ScheduleConfig.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates value provided only for either <cite>every</cite> or <cite>at</cite> and not to both</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if either value provided. False otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ScheduleConfig.ScheduleConfig.time_unit">
+<code class="descname">time_unit</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ScheduleConfig.ScheduleConfig.time_unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves time unit string from current instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">time unit string value</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-scheduling.Scheduler">
+<span id="scheduler-module"></span><h2>Scheduler module<a class="headerlink" href="#module-scheduling.Scheduler" title="Permalink to this headline">¶</a></h2>
+<p>This module provides various features for scheduling jobs.
+Following are the features provided by this module.</p>
+<ul class="simple">
+<li>Scheduling a job - we could add multiple jobs for schedule. Can be run continuously</li>
+<li>Cancelling a job with the job identifier</li>
+<li>Retrieve the next schedule run time</li>
+<li>Start scheduler</li>
+<li>Shutdown scheduler - default safe-shutdown, user can <em>force</em> shutdown</li>
+</ul>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="25%" />
+<col width="37%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Time unit</th>
+<th class="head">Every</th>
+<th class="head">At</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>minute</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>hour</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>second</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>minutes</td>
+<td>Numeric</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>hours</td>
+<td>Numeric</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>seconds</td>
+<td>Numeric</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td>monday</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>00:00 - 23:59</td>
+</tr>
+<tr class="row-odd"><td>tuesday</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>00:00 - 23:59</td>
+</tr>
+<tr class="row-even"><td>wednesday</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>00:00 - 23:59</td>
+</tr>
+<tr class="row-odd"><td>thursday</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>00:00 - 23:59</td>
+</tr>
+<tr class="row-even"><td>friday</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>00:00 - 23:59</td>
+</tr>
+<tr class="row-odd"><td>saturday</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>00:00 - 23:59</td>
+</tr>
+<tr class="row-even"><td>sunday</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>00:00 - 23:59</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since there is no synchronize mechanism between one or more scheduler instances,
+running 2 instances for the same job has adverse effects. For an instance,
+if the job is writing data into a database. Failure is bound to occur on the second
+instance of the scheduler due to data redundancy error from database.
+To resolve this issue, please modify configurations or a job for the second instance
+and then run 2 instances.</p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Assuming a job is transferring files from one location to another.
+Assuming the whole process takes 5 minutes in total. Scheduling the job every 2 minutes will
+cause errors due to another same job is already running.
+Therefore while scheduling a job, please analyse the maximum time required to complete a job.
+Then set the maximum interval plus additional buffer time, to avoid race condition.
+You could schedule a job to run once to understand the time required to finish the job.</p>
+</div>
+<div class="admonition-examples admonition">
+<p class="first admonition-title">Examples</p>
+<ol class="last arabic">
+<li><p class="first">Schedule a job which runs every minute, in main thread.</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">EVERY</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">TIME_UNIT</span> <span class="pre">=</span> <span class="pre">minutes</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche</span> <span class="pre">=</span> <span class="pre">Scheduler()</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">job1</span> <span class="pre">=</span> <span class="pre">TestJob()</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.schedule_job(job=job1,</span> <span class="pre">run_continuous=True)</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.start()</span></code></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Schedule a job which runs every hour, in separate thread.</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">EVERY</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">TIME_UNIT</span> <span class="pre">=</span> <span class="pre">hours</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche</span> <span class="pre">=</span> <span class="pre">Scheduler(separate_thread=True)</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">job1</span> <span class="pre">=</span> <span class="pre">TestJob()</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.schedule_job(job=job1,</span> <span class="pre">run_continuous=True)</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.start()</span></code></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Schedule a job which runs once everyday, in main thread.
+The scheduler will make best efforts to run the job at 00:00 default time of the day.</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">TIME_UNIT</span> <span class="pre">=</span> <span class="pre">day</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche</span> <span class="pre">=</span> <span class="pre">Scheduler()</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">job1</span> <span class="pre">=</span> <span class="pre">TestJob()</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.schedule_job(job=job1,</span> <span class="pre">run_continuous=True)</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.start()</span></code></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Schedule a job which runs at 10:00 every Friday, in main thread.</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">=</span> <span class="pre">10:00,</span> <span class="pre">TIME_UNIT</span> <span class="pre">=</span> <span class="pre">friday</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche</span> <span class="pre">=</span> <span class="pre">Scheduler()</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">job1</span> <span class="pre">=</span> <span class="pre">TestJob()</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.schedule_job(job=job1,</span> <span class="pre">run_continuous=True)</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.start()</span></code></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Schedule a job which run once only on Wednesday, in main thread.
+The scheduler will make best efforts to run the job at 00:00 default time of the day.</p>
+<blockquote>
+<div><p><strong>Note</strong>
+You should have guessed, that the scheduler must be running in order
+to execute this job on Wednesday. If the job scheduled on Friday, then
+scheduler should keep running for 5 days to execute a job on Wednesday</p>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">TIME_UNIT</span> <span class="pre">=</span> <span class="pre">wednesday</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche</span> <span class="pre">=</span> <span class="pre">Scheduler()</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">job1</span> <span class="pre">=</span> <span class="pre">TestJob()</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.schedule_job(job=job1)</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.start()</span></code></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Schedule a job which run once only at 21:00 on Wednesday, in main thread.</p>
+<blockquote>
+<div><p><strong>Note</strong>
+You should have guessed, that the scheduler must be running in order
+to execute this job on Wednesday as 21:00. If the job scheduled on Friday, then
+scheduler should keep running for 5 days to execute a job on Wednesday</p>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">=</span> <span class="pre">21:00,</span> <span class="pre">TIME_UNIT</span> <span class="pre">=</span> <span class="pre">wednesday</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche</span> <span class="pre">=</span> <span class="pre">Scheduler()</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">job1</span> <span class="pre">=</span> <span class="pre">TestJob()</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.schedule_job(job=job1)</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sche.start()</span></code></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<dl class="class">
+<dt id="scheduling.Scheduler.Scheduler">
+<em class="property">class </em><code class="descclassname">scheduling.Scheduler.</code><code class="descname">Scheduler</code><span class="sig-paren">(</span><em>separate_thread: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#scheduling.Scheduler.Scheduler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="scheduling.Scheduler.Scheduler.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>separate_thread: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#scheduling.Scheduler.Scheduler.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initiates default properties for scheduler which a user can set dynamically by changing its behaviour.
+Scheduler interval and time unit retrieved from configurations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>separate_thread</strong> (<em>bool</em>) – indicates whether to run scheduler jobs in a separate thread
+or in the <code class="docutils literal notranslate"><span class="pre">main</span></code> thread. Default False = <code class="docutils literal notranslate"><span class="pre">main</span></code> thread.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="scheduling.Scheduler.Scheduler.all_instances">
+<em class="property">static </em><code class="descname">all_instances</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#scheduling.Scheduler.Scheduler.all_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all instances of <code class="docutils literal notranslate"><span class="pre">Scheduler</span></code> created on this machine.
+<code class="docutils literal notranslate"><span class="pre">Key=Scheduler-[counter],</span> <span class="pre">Value=[instance</span> <span class="pre">of</span> <span class="pre">Scheduler]</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a map of scheduler instances</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scheduling.Scheduler.Scheduler.cancel_job">
+<code class="descname">cancel_job</code><span class="sig-paren">(</span><em>job_name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#scheduling.Scheduler.Scheduler.cancel_job" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancels a job from scheduler. Calling this methods has no effect, if scheduler shutdown is requested
+before calling this method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>job_name</strong> (<em>str</em>) – a job identifier set during a job schedule</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="scheduling.Scheduler.Scheduler.find_instance">
+<em class="property">static </em><code class="descname">find_instance</code><span class="sig-paren">(</span><em>instance_id: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#scheduling.Scheduler.Scheduler.find_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns a Scheduler instance mapped to an <code class="docutils literal notranslate"><span class="pre">instance_id</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">instance_id</span></code> is a number, it will add prefix <em>Scheduler-</em> before searching to collection.</p>
+<div class="admonition-examples admonition">
+<p class="first admonition-title">Examples</p>
+<div class="last line-block">
+<div class="line">1. <code class="docutils literal notranslate"><span class="pre">inst</span> <span class="pre">=</span> <span class="pre">Scheduler.instance_by(instance_id='1')</span></code></div>
+<div class="line">2. <code class="docutils literal notranslate"><span class="pre">inst</span> <span class="pre">=</span> <span class="pre">Scheduler.instance_by(instance_id='Scheduler-1')</span></code></div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>instance_id</strong> (<em>str</em>) – a Scheduler instance id to be search for</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">if present then instance of mapped Scheduler</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#scheduling.Scheduler.Scheduler" title="scheduling.Scheduler.Scheduler">Scheduler</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> – if <code class="docutils literal notranslate"><span class="pre">instance_id</span></code> is None or Empty</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scheduling.Scheduler.Scheduler.instance_id">
+<code class="descname">instance_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scheduling.Scheduler.Scheduler.instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> of current instance</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scheduling.Scheduler.Scheduler.schedule_job">
+<code class="descname">schedule_job</code><span class="sig-paren">(</span><em>job: jobs.Job.Job</em>, <em>schedule_config: scheduling.ScheduleConfig.ScheduleConfig = None</em>, <em>run_continuous: bool = False</em>, <em>execute_parallel: bool = False</em>, <em>pulse_seconds: int = 5</em><span class="sig-paren">)</span><a class="headerlink" href="#scheduling.Scheduler.Scheduler.schedule_job" title="Permalink to this definition">¶</a></dt>
+<dd><p>Schedules a job with <code class="docutils literal notranslate"><span class="pre">name</span></code> and user can specify whether the job should run once or should run continuously.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>job</strong> (<a class="reference internal" href="Scheduler.jobs.html#Job.Job" title="Job.Job"><em>Job</em></a>) – an instance of custom implementation of the <code class="docutils literal notranslate"><span class="pre">Job</span></code> module. Default <code class="docutils literal notranslate"><span class="pre">None</span></code></li>
+<li><strong>schedule_config</strong> (<a class="reference internal" href="#ScheduleConfig.ScheduleConfig" title="ScheduleConfig.ScheduleConfig"><em>ScheduleConfig</em></a>) – if user wants to change the <code class="docutils literal notranslate"><span class="pre">every</span></code> or <code class="docutils literal notranslate"><span class="pre">at</span></code> and <code class="docutils literal notranslate"><span class="pre">time_unit</span></code> before job schedule,
+then user can create an instance on ScheduleConfig and specify new values
+for schedule</li>
+<li><strong>run_continuous</strong> (<em>bool</em>) – if <code class="docutils literal notranslate"><span class="pre">True</span></code> the scheduler will continuously run jobs as per schedule,
+run jobs once otherwise</li>
+<li><strong>execute_parallel</strong> (<em>bool</em>) – if <code class="docutils literal notranslate"><span class="pre">True</span></code> the job will be scheduled to execute parallel by spawning a thread,
+sequential otherwise</li>
+<li><strong>pulse_seconds</strong> (<em>int</em>) – <p>seconds to keep checking next schedule. Default 5 seconds.</p>
+<div class="admonition-examples admonition">
+<p class="first admonition-title">Examples</p>
+<ol class="last arabic">
+<li><code class="docutils literal notranslate"><span class="pre">pulse_seconds=10</span></code> will check next scheduler every 10 seconds</li>
+<li><code class="docutils literal notranslate"><span class="pre">pulse_seconds=30</span></code> will check next scheduler every 30 seconds</li>
+</ol>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scheduling.Scheduler.Scheduler.shutdown">
+<code class="descname">shutdown</code><span class="sig-paren">(</span><em>force: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#scheduling.Scheduler.Scheduler.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shuts down the scheduler. When requested, calling cancel any job has no effect.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>force</strong> (<em>bool</em>) – if <code class="docutils literal notranslate"><span class="pre">True</span></code> it will not wait until the jobs complete, otherwise will wait until
+all jobs complete and then safely shutdown</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scheduling.Scheduler.Scheduler.start">
+<code class="descname">start</code><span class="sig-paren">(</span><em>print_next_run=True</em><span class="sig-paren">)</span><a class="headerlink" href="#scheduling.Scheduler.Scheduler.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the scheduler as per the configurations and parameters. Calling this method more than once has
+no effect if <code class="docutils literal notranslate"><span class="pre">shutdown</span></code> requested or already started.
+If <code class="docutils literal notranslate"><span class="pre">separate_thread</span></code> is true, then scheduler will run in separate thread, <code class="docutils literal notranslate"><span class="pre">main</span></code> thread otherwise.
+If <code class="docutils literal notranslate"><span class="pre">run_continuous</span></code> is true, then job will be run continuously, once otherwise</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>print_next_run</strong> (<em>bool</em>) – if <code class="docutils literal notranslate"><span class="pre">True</span></code> it will keep printing next rnu schedule at every <code class="docutils literal notranslate"><span class="pre">pulse_seconds</span></code>.
+Default every 5 seconds</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scheduling.Scheduler.Scheduler.what_is_next_run">
+<code class="descname">what_is_next_run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scheduling.Scheduler.Scheduler.what_is_next_run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves next job run schedule</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">next run schedule</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Aditya Pant.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

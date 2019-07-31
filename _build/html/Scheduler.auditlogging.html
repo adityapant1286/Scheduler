@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>auditlogging package &#8212; Scheduler 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="agents package" href="Scheduler.auditlogging.agents.html" />
+    <link rel="prev" title="Scheduler package" href="Scheduler.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/logo.png"></span>
+          Scheduler</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Scheduler.html">Scheduler package</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">auditlogging package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-Auditor">Auditor module</a></li>
+<li><a class="reference internal" href="#module-Trail">Trail module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Scheduler.html" title="Previous Chapter: Scheduler package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Scheduler package</span>
+    </a>
+  </li>
+  <li>
+    <a href="Scheduler.auditlogging.agents.html" title="Next Chapter: agents package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">agents package &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/Scheduler.auditlogging.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="auditlogging-package">
+<h1>auditlogging package<a class="headerlink" href="#auditlogging-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Scheduler.auditlogging.agents.html">agents package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.auditlogging.agents.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.auditlogging.agents.html#module-APIAuditAgent">APIAuditAgent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.auditlogging.agents.html#module-AuditAgent">AuditAgent module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.auditlogging.agents.html#module-DefaultAgent">DefaultAgent module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Auditor">
+<span id="auditor-module"></span><h2>Auditor module<a class="headerlink" href="#module-Auditor" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Auditor.add_agent">
+<code class="descclassname">Auditor.</code><code class="descname">add_agent</code><span class="sig-paren">(</span><em>namekey: str</em>, <em>agent: auditlogging.agents.AuditAgent.AuditAgent</em><span class="sig-paren">)</span><a class="headerlink" href="#Auditor.add_agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an AuditAgent to this Auditor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>namekey</strong> (<em>str</em>) – AuditAgent identifier which will be used to remove</li>
+<li><strong>agent</strong> (<a class="reference internal" href="Scheduler.auditlogging.agents.html#AuditAgent.AuditAgent" title="AuditAgent.AuditAgent"><em>AuditAgent</em></a>) – custom built AuditAgent</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Auditor.audit_custom">
+<code class="descclassname">Auditor.</code><code class="descname">audit_custom</code><span class="sig-paren">(</span><em>jsontrail: str</em><span class="sig-paren">)</span><a class="headerlink" href="#Auditor.audit_custom" title="Permalink to this definition">¶</a></dt>
+<dd><p>If you choosed to have your custom endpoint URL to capture
+Audit trail which has different JSON request body then,
+call this function</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>jsontrail</strong> (<em>str</em>) – a custom JSON string to be used as a request body for a POST endpoint</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Auditor.audit_params">
+<code class="descclassname">Auditor.</code><code class="descname">audit_params</code><span class="sig-paren">(</span><em>operation: str</em>, <em>status: str</em>, <em>comments: str</em><span class="sig-paren">)</span><a class="headerlink" href="#Auditor.audit_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameterised audit trail capture method. Internally Auditor will create a Trail object
+and assign to all AuditAgent</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>operation</strong> (<em>str</em>) – An operation being performed or executed at the moment</li>
+<li><strong>status</strong> (<em>str</em>) – Current status of the operation being performed or executed at the moment</li>
+<li><strong>comments</strong> (<em>str</em>) – Additional comments relating to the operation</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Auditor.audit_trail">
+<code class="descclassname">Auditor.</code><code class="descname">audit_trail</code><span class="sig-paren">(</span><em>trail: auditlogging.Trail.Trail</em><span class="sig-paren">)</span><a class="headerlink" href="#Auditor.audit_trail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass on the trail to Audit agents</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>trail</strong> (<a class="reference internal" href="#Trail.Trail" title="Trail.Trail"><em>Trail</em></a>) – a trail instance</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Auditor.remove_agent">
+<code class="descclassname">Auditor.</code><code class="descname">remove_agent</code><span class="sig-paren">(</span><em>namekey: str</em><span class="sig-paren">)</span><a class="headerlink" href="#Auditor.remove_agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>If present then, it removes AuditAgent from Auditor’s agent collection.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>namekey</strong> (<em>str</em>) – An AuditAgent to be removed</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-Trail">
+<span id="trail-module"></span><h2>Trail module<a class="headerlink" href="#module-Trail" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Trail.Trail">
+<em class="property">class </em><code class="descclassname">Trail.</code><code class="descname">Trail</code><a class="headerlink" href="#Trail.Trail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Trail model consists fields which will be store data.
+This class implements a builder pattern where a caller can build an object of this class.</p>
+<dl class="method">
+<dt id="Trail.Trail.build_trail">
+<code class="descname">build_trail</code><span class="sig-paren">(</span><em>formatted_json: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#Trail.Trail.build_trail" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method should be invoke at the end when a constructed Trail object require</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>formatted_json</strong> (<em>bool</em>) – if True then an object will be formatted using utility as JSON,
+otherwise a string representation of Trail object in JSON format</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">constructed Trail object in JSON format</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Trail.Trail.comments">
+<code class="descname">comments</code><span class="sig-paren">(</span><em>comments: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#Trail.Trail.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the comments to the trail instance. Default None.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>comments</strong> (<em>str</em>) – Additional comments relating to the operation</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">current instance of trail</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Trail.Trail" title="Trail.Trail">Trail</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Trail.Trail.operation">
+<code class="descname">operation</code><span class="sig-paren">(</span><em>operation: str</em><span class="sig-paren">)</span><a class="headerlink" href="#Trail.Trail.operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the operation to the trail instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>operation</strong> (<em>str</em>) – An operation being performed or executed at the moment</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">current instance of trail</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Trail.Trail" title="Trail.Trail">Trail</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Trail.Trail.status">
+<code class="descname">status</code><span class="sig-paren">(</span><em>status: str</em><span class="sig-paren">)</span><a class="headerlink" href="#Trail.Trail.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the status to the trail instance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>status</strong> (<em>str</em>) – Current status of the operation being performed or executed at the moment</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">current instance of trail</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#Trail.Trail" title="Trail.Trail">Trail</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Aditya Pant.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

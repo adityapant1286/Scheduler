@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ioservice package &#8212; Scheduler 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="cleaners package" href="Scheduler.ioservice.cleaners.html" />
+    <link rel="prev" title="configs package" href="Scheduler.configs.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/logo.png"></span>
+          Scheduler</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Scheduler.html">Scheduler package</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">ioservice package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-HostConfig">HostConfig module</a></li>
+<li><a class="reference internal" href="#module-IOService">IOService module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Scheduler.configs.html" title="Previous Chapter: configs package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; configs package</span>
+    </a>
+  </li>
+  <li>
+    <a href="Scheduler.ioservice.cleaners.html" title="Next Chapter: cleaners package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">cleaners package &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/Scheduler.ioservice.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="ioservice-package">
+<h1>ioservice package<a class="headerlink" href="#ioservice-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Scheduler.ioservice.cleaners.html">cleaners package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.cleaners.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.cleaners.html#module-Cleaner">Cleaner module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.cleaners.html#module-DirectoryCleaner">DirectoryCleaner module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Scheduler.ioservice.downloaders.html">downloaders package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.downloaders.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.downloaders.html#module-Downloader">Downloader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.downloaders.html#module-LocalDownloader">LocalDownloader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.downloaders.html#module-RemoteDownloader">RemoteDownloader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.downloaders.html#module-TestDownloader">TestDownloader module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Scheduler.ioservice.uploaders.html">uploaders package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.uploaders.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.uploaders.html#module-LocalUploader">LocalUploader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.uploaders.html#module-MoveFilesOnRemote">MoveFilesOnRemote module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.uploaders.html#module-RemoteUploader">RemoteUploader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Scheduler.ioservice.uploaders.html#module-Uploader">Uploader module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-HostConfig">
+<span id="hostconfig-module"></span><h2>HostConfig module<a class="headerlink" href="#module-HostConfig" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="HostConfig.HostConfig">
+<em class="property">class </em><code class="descclassname">HostConfig.</code><code class="descname">HostConfig</code><a class="headerlink" href="#HostConfig.HostConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A data model class which holds custom configurations for different IO services.
+A subclass of either Cleaner or Downloader tor Uploader can use this class to hold connectivity
+details or additional file parameters.
+This class implements a builder pattern where a developer can set required values to an object.</p>
+<dl class="method">
+<dt id="HostConfig.HostConfig.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>k</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HostConfig.HostConfig.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optionally a developer can use this method to append as many as
+custom config which can be retrieved using key.
+Please use get(k) method to retrieve a custom value of a key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>k</strong> (<em>str</em>) – a key to be used to identify its value</li>
+<li><strong>v</strong> (<em>object</em>) – a value associated to key</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">instance of this object</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#HostConfig.HostConfig" title="HostConfig.HostConfig">HostConfig</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.build">
+<code class="descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#HostConfig.HostConfig.build" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Optional: constructs and returns final HostConfig object having</dt>
+<dd>key=values set before calling this method</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constructed HostConfig object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#HostConfig.HostConfig" title="HostConfig.HostConfig">HostConfig</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.dest">
+<code class="descname">dest</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HostConfig.HostConfig.dest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets destination directory or file depending on implementation of a subclass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>object</em>) – an associate destination directory or file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">instance of this object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#HostConfig.HostConfig" title="HostConfig.HostConfig">HostConfig</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.fileext">
+<code class="descname">fileext</code><span class="sig-paren">(</span><em>v: list</em><span class="sig-paren">)</span><a class="headerlink" href="#HostConfig.HostConfig.fileext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a list of file extensions which could be used to filter files</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>object</em>) – an associated list of file extensions</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">instance of this object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#HostConfig.HostConfig" title="HostConfig.HostConfig">HostConfig</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>k: str</em>, <em>_default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#HostConfig.HostConfig.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Developer should use this method if any custom configurations are appended to this HostConfig.
+For all predefined configurations a developer should call corresponding method
+to avoid exception due to invalid key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>k</strong> (<em>str</em>) – a key to be searched in configuration</li>
+<li><strong>_default</strong> (<em>object</em>) – a default value should be returned if specified key not found.
+If not provided then default None</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a value associate to key if present, default otherwise</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">object</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.getdest">
+<code class="descname">getdest</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#HostConfig.HostConfig.getdest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves destination directory or file path</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">if set then returns destination directory or file path,
+current directory ‘.’ path otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.getfile_ext">
+<code class="descname">getfile_ext</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#HostConfig.HostConfig.getfile_ext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves a list of file extensions to be used for filter</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">if set then returns a list of file extensions, blank string otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.gethost">
+<code class="descname">gethost</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#HostConfig.HostConfig.gethost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves host name or IP address</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">if set then returns host name or host IP address, ‘127.0.0.1’ otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.getport">
+<code class="descname">getport</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#HostConfig.HostConfig.getport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves host port number</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">if set then returns host port number, 22 otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.getsecret">
+<code class="descname">getsecret</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#HostConfig.HostConfig.getsecret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves password or SSH private key location path or OAUTH token of the host username</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">if set then returns host password or SSH private key location path or OAUTH token,
+None otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.getsrc">
+<code class="descname">getsrc</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#HostConfig.HostConfig.getsrc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves source directory or file path</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">if set then returns source directory or file path,
+current directory ‘.’ path otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.getuser">
+<code class="descname">getuser</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#HostConfig.HostConfig.getuser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves host username</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">if set then returns host username, current username otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.host">
+<code class="descname">host</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HostConfig.HostConfig.host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets host name or IP address</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>object</em>) – an associated host name or IP address</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">instance of this object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#HostConfig.HostConfig" title="HostConfig.HostConfig">HostConfig</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.port">
+<code class="descname">port</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HostConfig.HostConfig.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets port number of a host</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>object</em>) – an associated host port number</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">instance of this object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#HostConfig.HostConfig" title="HostConfig.HostConfig">HostConfig</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.secret">
+<code class="descname">secret</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HostConfig.HostConfig.secret" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets either password string or SSH private key location path or an OAUTH token, which will be
+used to connect to a host along with username</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>object</em>) – an associated password string or SSH private key location path or OAUTH token</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">instance of this object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#HostConfig.HostConfig" title="HostConfig.HostConfig">HostConfig</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.src">
+<code class="descname">src</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HostConfig.HostConfig.src" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets source directory or file depending on implementation of a subclass</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>object</em>) – an associated source directory or file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">instance of this object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#HostConfig.HostConfig" title="HostConfig.HostConfig">HostConfig</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="HostConfig.HostConfig.user">
+<code class="descname">user</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#HostConfig.HostConfig.user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets username which will be used to connect to a host</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>v</strong> (<em>object</em>) – an associated username of a host</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">instance of this object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#HostConfig.HostConfig" title="HostConfig.HostConfig">HostConfig</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-IOService">
+<span id="ioservice-module"></span><h2>IOService module<a class="headerlink" href="#module-IOService" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="IOService.cleanup">
+<code class="descclassname">IOService.</code><code class="descname">cleanup</code><span class="sig-paren">(</span><em>cleaner: ioservice.cleaners.Cleaner.Cleaner</em><span class="sig-paren">)</span><a class="headerlink" href="#IOService.cleanup" title="Permalink to this definition">¶</a></dt>
+<dd><p>The caller should inject the appropriate implementation to perform
+cleanup operation as per use case</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cleaner</strong> (<a class="reference internal" href="Scheduler.ioservice.cleaners.html#Cleaner.Cleaner" title="Cleaner.Cleaner"><em>Cleaner</em></a>) – instance of custom cleaner implementation which has overridden
+clean() function</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="IOService.download">
+<code class="descclassname">IOService.</code><code class="descname">download</code><span class="sig-paren">(</span><em>downloader: ioservice.downloaders.Downloader.Downloader</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#IOService.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>The caller should inject the appropriate implementation to perform
+download operation as per use case</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>downloader</strong> (<a class="reference internal" href="Scheduler.ioservice.downloaders.html#Downloader.Downloader" title="Downloader.Downloader"><em>Downloader</em></a>) – instance of custom downloader implementation which has overridden
+download() function</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of downloaded files ordered by last modified time,
+earlier will be the first element</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="IOService.upload">
+<code class="descclassname">IOService.</code><code class="descname">upload</code><span class="sig-paren">(</span><em>uploader: ioservice.uploaders.Uploader.Uploader</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#IOService.upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>The caller should inject the appropriate implementation to perform
+upload operation as per use case</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>uploader</strong> (<a class="reference internal" href="Scheduler.ioservice.uploaders.html#Uploader.Uploader" title="Uploader.Uploader"><em>Uploader</em></a>) – instance of custom uploader implementation which has overridden
+upload() function</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a list of uploaded files</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Aditya Pant.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

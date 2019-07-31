@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>downloaders package &#8212; Scheduler 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="uploaders package" href="Scheduler.ioservice.uploaders.html" />
+    <link rel="prev" title="cleaners package" href="Scheduler.ioservice.cleaners.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/logo.png"></span>
+          Scheduler</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Scheduler.html">Scheduler package</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">downloaders package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-Downloader">Downloader module</a></li>
+<li><a class="reference internal" href="#module-LocalDownloader">LocalDownloader module</a></li>
+<li><a class="reference internal" href="#module-RemoteDownloader">RemoteDownloader module</a></li>
+<li><a class="reference internal" href="#module-TestDownloader">TestDownloader module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Scheduler.ioservice.cleaners.html" title="Previous Chapter: cleaners package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; cleaners package</span>
+    </a>
+  </li>
+  <li>
+    <a href="Scheduler.ioservice.uploaders.html" title="Next Chapter: uploaders package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">uploaders package &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/Scheduler.ioservice.downloaders.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="downloaders-package">
+<h1>downloaders package<a class="headerlink" href="#downloaders-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Downloader">
+<span id="downloader-module"></span><h2>Downloader module<a class="headerlink" href="#module-Downloader" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Downloader.Downloader">
+<em class="property">class </em><code class="descclassname">Downloader.</code><code class="descname">Downloader</code><a class="headerlink" href="#Downloader.Downloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An abstract class provides a template for download activities.
+A subclass must provide implementation for download operation.</p>
+<div class="admonition-examples admonition">
+<p class="first admonition-title">Examples</p>
+<ol class="last arabic simple">
+<li>Files download from SFTP or remote location</li>
+<li>Files copy from one directory to another</li>
+</ol>
+</div>
+<dl class="method">
+<dt id="Downloader.Downloader.change_dir">
+<code class="descname">change_dir</code><span class="sig-paren">(</span><em>src: str</em>, <em>dest: str</em><span class="sig-paren">)</span><a class="headerlink" href="#Downloader.Downloader.change_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides the source and/or destination directory</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>src</strong> (<em>str</em>) – source directory path</li>
+<li><strong>dest</strong> (<em>str</em>) – destination directory path</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Downloader.Downloader.change_files">
+<code class="descname">change_files</code><span class="sig-paren">(</span><em>files: list</em><span class="sig-paren">)</span><a class="headerlink" href="#Downloader.Downloader.change_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides a list of files to be used to perform IO operations.
+It is usefull when user just wants to pass a new list of files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>files</strong> – a new list of files</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Downloader.Downloader.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#Downloader.Downloader.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>An abstract method for all download or copy operations</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list for files downloaded</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-LocalDownloader">
+<span id="localdownloader-module"></span><h2>LocalDownloader module<a class="headerlink" href="#module-LocalDownloader" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="LocalDownloader.LocalDownloader">
+<em class="property">class </em><code class="descclassname">LocalDownloader.</code><code class="descname">LocalDownloader</code><a class="headerlink" href="#LocalDownloader.LocalDownloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ioservice.downloaders.Downloader.Downloader</span></code></p>
+<p>This class provides implementation for localhost file copy operation
+from source to destination</p>
+<dl class="method">
+<dt id="LocalDownloader.LocalDownloader.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LocalDownloader.LocalDownloader.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve required file system paths from configurations</p>
+<ol class="arabic simple">
+<li>Source directory path</li>
+<li>Destination directory path</li>
+<li>File extensions which will be used to filter out only required files</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="LocalDownloader.LocalDownloader.change_dir">
+<code class="descname">change_dir</code><span class="sig-paren">(</span><em>src: str = None</em>, <em>dest: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#LocalDownloader.LocalDownloader.change_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides the source and/or destination directory</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>src</strong> (<em>str</em>) – source directory</li>
+<li><strong>dest</strong> (<em>str</em>) – destination directory path</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="LocalDownloader.LocalDownloader.change_files">
+<code class="descname">change_files</code><span class="sig-paren">(</span><em>files: list = None</em><span class="sig-paren">)</span><a class="headerlink" href="#LocalDownloader.LocalDownloader.change_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not required for this operation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>files</strong> – NA</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="LocalDownloader.LocalDownloader.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#LocalDownloader.LocalDownloader.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy files from source directory to destination.
+Only files will be considered which are matches with the extension mentioned in the configurations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of copied files</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-RemoteDownloader">
+<span id="remotedownloader-module"></span><h2>RemoteDownloader module<a class="headerlink" href="#module-RemoteDownloader" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="RemoteDownloader.RemoteDownloader">
+<em class="property">class </em><code class="descclassname">RemoteDownloader.</code><code class="descname">RemoteDownloader</code><a class="headerlink" href="#RemoteDownloader.RemoteDownloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ioservice.downloaders.Downloader.Downloader</span></code></p>
+<p>Provides implementation for downloading files from a remote host using SFTP.</p>
+<dl class="method">
+<dt id="RemoteDownloader.RemoteDownloader.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RemoteDownloader.RemoteDownloader.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves required SFTP configurations from configurations</p>
+<ol class="arabic simple">
+<li>Host</li>
+<li>Port</li>
+<li>Username</li>
+<li><dl class="first docutils">
+<dt>Secret (password or SSH private key path) &gt; this implementation auto detects whether</dt>
+<dd>to connect using password or private key file</dd>
+</dl>
+</li>
+<li>Remote location source directory path</li>
+<li>localhost destination directory path</li>
+<li>File extensions to be filter</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="RemoteDownloader.RemoteDownloader.change_dir">
+<code class="descname">change_dir</code><span class="sig-paren">(</span><em>src: str = None</em>, <em>dest: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#RemoteDownloader.RemoteDownloader.change_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides the source and/or destination directory</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>src</strong> (<em>str</em>) – source directory</li>
+<li><strong>dest</strong> (<em>str</em>) – destination directory path</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RemoteDownloader.RemoteDownloader.change_file_ext">
+<code class="descname">change_file_ext</code><span class="sig-paren">(</span><em>file_ext: list = None</em><span class="sig-paren">)</span><a class="headerlink" href="#RemoteDownloader.RemoteDownloader.change_file_ext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override file extensions for filter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_ext</strong> (<em>list</em>) – a list of file extensions to be filterred</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RemoteDownloader.RemoteDownloader.change_files">
+<code class="descname">change_files</code><span class="sig-paren">(</span><em>files: list = None</em><span class="sig-paren">)</span><a class="headerlink" href="#RemoteDownloader.RemoteDownloader.change_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not require for this operation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>files</strong> – NA</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RemoteDownloader.RemoteDownloader.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#RemoteDownloader.RemoteDownloader.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to SFTP host using configurations
+and scans for files as per the extensions mentioned in the configurations.
+If there are any matching files, they will be downloaded to destination
+with total seconds taken to download files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of downloaded files ordered by modified time in ascending.
+Earliest will be the first.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="RemoteDownloader.RemoteDownloader.fromconfig">
+<code class="descname">fromconfig</code><span class="sig-paren">(</span><em>configs: ioservice.HostConfig.HostConfig</em><span class="sig-paren">)</span><a class="headerlink" href="#RemoteDownloader.RemoteDownloader.fromconfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows to change configurations at runtime</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>configs</strong> (<a class="reference internal" href="Scheduler.ioservice.html#HostConfig.HostConfig" title="HostConfig.HostConfig"><em>HostConfig</em></a>) – Custom configurations which will be used for SFTP connection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-TestDownloader">
+<span id="testdownloader-module"></span><h2>TestDownloader module<a class="headerlink" href="#module-TestDownloader" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="TestDownloader.TestDownloader">
+<em class="property">class </em><code class="descclassname">TestDownloader.</code><code class="descname">TestDownloader</code><a class="headerlink" href="#TestDownloader.TestDownloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ioservice.downloaders.Downloader.Downloader</span></code></p>
+<dl class="method">
+<dt id="TestDownloader.TestDownloader.change_dir">
+<code class="descname">change_dir</code><span class="sig-paren">(</span><em>src: str</em>, <em>dest: str</em><span class="sig-paren">)</span><a class="headerlink" href="#TestDownloader.TestDownloader.change_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides the source and/or destination directory</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>src</strong> (<em>str</em>) – source directory path</li>
+<li><strong>dest</strong> (<em>str</em>) – destination directory path</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TestDownloader.TestDownloader.change_files">
+<code class="descname">change_files</code><span class="sig-paren">(</span><em>files: list</em><span class="sig-paren">)</span><a class="headerlink" href="#TestDownloader.TestDownloader.change_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides a list of files to be used to perform IO operations.
+It is usefull when user just wants to pass a new list of files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>files</strong> – a new list of files</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TestDownloader.TestDownloader.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TestDownloader.TestDownloader.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>An abstract method for all download or copy operations</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list for files downloaded</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Aditya Pant.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

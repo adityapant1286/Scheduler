@@ -1,0 +1,32 @@
+
+DEV:
+  IS_REMOTE: Yes
+  SOURCE_DIRECTORY: /files/input/
+  ARCHIVE_DIRECTORY: /files/output/
+  REMOTE_ERROR_DIRECTORY: /files/error/
+  SOURCE_HOST: pubsftp.zuora.com
+  SOURCE_PORT: 30022
+  SOURCE_USERNAME: 'QR901tWuM2'
+  SOURCE_SECRET: '%#9NwEy<xqBmR>MnmN'
+  TARGET_DIRECTORY: /Users/apant/Documents/developer/arctic_tern_test/input
+  ERROR_DIRECTORY: /Users/apant/Documents/developer/arctic_tern_test/err
+  OUTPUT_DIRECTORY: /Users/apant/Documents/developer/arctic_tern_test/out
+  LOG_DIRECTORY:
+  FILE_EXTENSIONS:
+    - py
+    - csv
+  ACTION: CREATE
+  EVERY:
+  TIME_UNIT: hour
+  AT:
+  NOTIFICATIONS:
+    - SMTP_HOST: localhost
+      SMTP_PORT: 443
+      EMAIL_SUBJECT: sample email subject
+      EMAIL_BODY: <h2>Email body</h2>
+      FROM_EMAIL: apant@zuora.com
+      RECIPIENT_EMAIL:
+        - apant@zuora.com
+      EMAIL_DELIVERY_ON:
+        - ERROR
+

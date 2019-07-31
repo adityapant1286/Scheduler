@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>notifiers package &#8212; Scheduler 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="scheduling package" href="Scheduler.scheduling.html" />
+    <link rel="prev" title="notification package" href="Scheduler.notification.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/logo.png"></span>
+          Scheduler</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Scheduler.html">Scheduler package</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">notifiers package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-EmailNotifier">EmailNotifier module</a></li>
+<li><a class="reference internal" href="#module-Notifier">Notifier module</a></li>
+<li><a class="reference internal" href="#module-SlackNotifier">SlackNotifier module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Scheduler.notification.html" title="Previous Chapter: notification package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; notification package</span>
+    </a>
+  </li>
+  <li>
+    <a href="Scheduler.scheduling.html" title="Next Chapter: scheduling package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">scheduling package &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/Scheduler.notification.notifiers.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="notifiers-package">
+<h1>notifiers package<a class="headerlink" href="#notifiers-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-EmailNotifier">
+<span id="emailnotifier-module"></span><h2>EmailNotifier module<a class="headerlink" href="#module-EmailNotifier" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="EmailNotifier.EmailNotifier">
+<em class="property">class </em><code class="descclassname">EmailNotifier.</code><code class="descname">EmailNotifier</code><span class="sig-paren">(</span><em>attachments=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EmailNotifier.EmailNotifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">notification.notifiers.Notifier.Notifier</span></code></p>
+<p>A subclass to provide implementation to send an email notification.
+This class implements Notifier behaviour.</p>
+<dl class="method">
+<dt id="EmailNotifier.EmailNotifier.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>attachments=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EmailNotifier.EmailNotifier.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The details required to send an email are retrieved from configurations. Optionally caller can provide
+attachments for the email notification</p>
+<ol class="arabic simple">
+<li>SMTP host</li>
+<li>SMTP port</li>
+<li>From email address</li>
+<li>A list of recipient emails addresses</li>
+<li>Email subject</li>
+<li>Email body</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>attachments</strong> (<em>object</em>) – a list of file paths to be attached to a message, default None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="EmailNotifier.EmailNotifier.notify">
+<code class="descname">notify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EmailNotifier.EmailNotifier.notify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to SMTP server and sends an email to recipients mentioned in configurations</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Notifier">
+<span id="notifier-module"></span><h2>Notifier module<a class="headerlink" href="#module-Notifier" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Notifier.Notifier">
+<em class="property">class </em><code class="descclassname">Notifier.</code><code class="descname">Notifier</code><a class="headerlink" href="#Notifier.Notifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provides a template to a subsclass to provide implementation for notification</p>
+<dl class="method">
+<dt id="Notifier.Notifier.notify">
+<code class="descname">notify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Notifier.Notifier.notify" title="Permalink to this definition">¶</a></dt>
+<dd><p>A subclass must provide implementation to notification</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-SlackNotifier">
+<span id="slacknotifier-module"></span><h2>SlackNotifier module<a class="headerlink" href="#module-SlackNotifier" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="SlackNotifier.SlackNotifier">
+<em class="property">class </em><code class="descclassname">SlackNotifier.</code><code class="descname">SlackNotifier</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#SlackNotifier.SlackNotifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">notification.notifiers.Notifier.Notifier</span></code></p>
+<p>A notifier implementation which provides functionality to send message on <strong>slack</strong> channels.
+This class can perform following operations</p>
+<ol class="arabic simple">
+<li>Add new channel URL</li>
+<li>Remove a channel URL</li>
+<li>Clear all channels</li>
+<li>Restore to default channel</li>
+<li>Change or set a new message</li>
+<li>Overrides <code class="docutils literal notranslate"><span class="pre">notify</span></code> method from <code class="docutils literal notranslate"><span class="pre">Notifier</span></code> which will be invoked by <code class="docutils literal notranslate"><span class="pre">NotificationService</span></code></li>
+</ol>
+<dl class="method">
+<dt id="SlackNotifier.SlackNotifier.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#SlackNotifier.SlackNotifier.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an instance and use msg parameter to send a message to added channels</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>msg</strong> (<em>str</em>) – a message to be send, default ‘Hello’. User can send formatted message.
+Please refer <a class="reference external" href="https://api.slack.com/docs/message-formatting/">Slack - Basic message formatting</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SlackNotifier.SlackNotifier.add_url">
+<code class="descname">add_url</code><span class="sig-paren">(</span><em>namekey: str</em>, <em>url: str</em><span class="sig-paren">)</span><a class="headerlink" href="#SlackNotifier.SlackNotifier.add_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a channel URL to send a message on the slack channel</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>namekey</strong> (<em>str</em>) – A URL identifier which can be use to remove</li>
+<li><strong>url</strong> (<em>str</em>) – A slack channel URL</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">instance of this object</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#SlackNotifier.SlackNotifier" title="SlackNotifier.SlackNotifier">SlackNotifier</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SlackNotifier.SlackNotifier.clear_channels">
+<code class="descname">clear_channels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SlackNotifier.SlackNotifier.clear_channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears all channels in case user needs to stop sending messages to added channels.
+<strong>Note:</strong> Please call <code class="docutils literal notranslate"><span class="pre">restore_default</span></code> to set to default channel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SlackNotifier.SlackNotifier.notify">
+<code class="descname">notify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SlackNotifier.SlackNotifier.notify" title="Permalink to this definition">¶</a></dt>
+<dd><p>A custom implementation to send a message on <code class="docutils literal notranslate"><span class="pre">slack</span></code> channels</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SlackNotifier.SlackNotifier.remove_url">
+<code class="descname">remove_url</code><span class="sig-paren">(</span><em>namekey: str</em><span class="sig-paren">)</span><a class="headerlink" href="#SlackNotifier.SlackNotifier.remove_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes channel URL associated with <code class="docutils literal notranslate"><span class="pre">namekey</span></code>,
+returns <code class="docutils literal notranslate"><span class="pre">None</span></code> if key is not present.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>namekey</strong> (<em>str</em>) – URL identifier which should be removed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">removed/popped element, <code class="docutils literal notranslate"><span class="pre">None</span></code> otherwise</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SlackNotifier.SlackNotifier.restore_default">
+<code class="descname">restore_default</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SlackNotifier.SlackNotifier.restore_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>In case user wants to restore to default channel, then this method first clears all channels and
+sets to default channel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">current instance of slack notifier</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#SlackNotifier.SlackNotifier" title="SlackNotifier.SlackNotifier">SlackNotifier</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SlackNotifier.SlackNotifier.set_msg">
+<code class="descname">set_msg</code><span class="sig-paren">(</span><em>msg: None</em><span class="sig-paren">)</span><a class="headerlink" href="#SlackNotifier.SlackNotifier.set_msg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a new message to be sent to a slack channel. If input <code class="docutils literal notranslate"><span class="pre">msg</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>,
+it will not change message.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>msg</strong> (<em>str</em>) – <p>a new message.
+Please refer <a class="reference external" href="https://api.slack.com/docs/message-formatting/">Slack - Basic message formatting</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">instance of this object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#SlackNotifier.SlackNotifier" title="SlackNotifier.SlackNotifier">SlackNotifier</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Aditya Pant.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

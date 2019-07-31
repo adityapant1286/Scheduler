@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>cleaners package &#8212; Scheduler 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="downloaders package" href="Scheduler.ioservice.downloaders.html" />
+    <link rel="prev" title="ioservice package" href="Scheduler.ioservice.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/logo.png"></span>
+          Scheduler</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="Scheduler.html">Scheduler package</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">cleaners package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-Cleaner">Cleaner module</a></li>
+<li><a class="reference internal" href="#module-DirectoryCleaner">DirectoryCleaner module</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="Scheduler.ioservice.html" title="Previous Chapter: ioservice package"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; ioservice package</span>
+    </a>
+  </li>
+  <li>
+    <a href="Scheduler.ioservice.downloaders.html" title="Next Chapter: downloaders package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">downloaders package &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/Scheduler.ioservice.cleaners.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="cleaners-package">
+<h1>cleaners package<a class="headerlink" href="#cleaners-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Cleaner">
+<span id="cleaner-module"></span><h2>Cleaner module<a class="headerlink" href="#module-Cleaner" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Cleaner.Cleaner">
+<em class="property">class </em><code class="descclassname">Cleaner.</code><code class="descname">Cleaner</code><a class="headerlink" href="#Cleaner.Cleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An abstract class which provides a template for cleanup
+activities.</p>
+<div class="admonition-example admonition">
+<p class="first admonition-title">Example</p>
+<ol class="last arabic simple">
+<li>Directory cleanup when no longer needed</li>
+<li>Databased rows cleanup</li>
+</ol>
+</div>
+<dl class="method">
+<dt id="Cleaner.Cleaner.change_dir">
+<code class="descname">change_dir</code><span class="sig-paren">(</span><em>src: str</em>, <em>dest: str</em><span class="sig-paren">)</span><a class="headerlink" href="#Cleaner.Cleaner.change_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides the source and/or destination directory</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>src</strong> (<em>str</em>) – source directory path</li>
+<li><strong>dest</strong> (<em>str</em>) – destination directory path</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cleaner.Cleaner.change_files">
+<code class="descname">change_files</code><span class="sig-paren">(</span><em>files: list</em><span class="sig-paren">)</span><a class="headerlink" href="#Cleaner.Cleaner.change_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides a list of files to be used to perform IO operations.
+It is usefull when user just wants to pass a new list of files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>files</strong> – a new list of files</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Cleaner.Cleaner.clean">
+<code class="descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Cleaner.Cleaner.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>A subclass must provide implementation for this method to perform any
+cleanup activities.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-DirectoryCleaner">
+<span id="directorycleaner-module"></span><h2>DirectoryCleaner module<a class="headerlink" href="#module-DirectoryCleaner" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="DirectoryCleaner.DirectoryCleaner">
+<em class="property">class </em><code class="descclassname">DirectoryCleaner.</code><code class="descname">DirectoryCleaner</code><span class="sig-paren">(</span><em>src: str</em>, <em>remove_subdirs: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#DirectoryCleaner.DirectoryCleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ioservice.cleaners.Cleaner.Cleaner</span></code></p>
+<p>Provides a directory cleanup implementation</p>
+<dl class="method">
+<dt id="DirectoryCleaner.DirectoryCleaner.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>src: str</em>, <em>remove_subdirs: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#DirectoryCleaner.DirectoryCleaner.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accepts a directory path to be clean and additional parameter
+to indicate whether to clean sub directories as well</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>src</strong> (<em>str</em>) – a directory path to be cleaned</li>
+<li><strong>remove_subdirs</strong> (<em>bool</em>) – if true sub-directories will be cleaned,
+else only files contain in directory path</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DirectoryCleaner.DirectoryCleaner.change_dir">
+<code class="descname">change_dir</code><span class="sig-paren">(</span><em>src: str = None</em>, <em>dest: str = None</em><span class="sig-paren">)</span><a class="headerlink" href="#DirectoryCleaner.DirectoryCleaner.change_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides the source directory path to be clean.
+Destination directory will be ignored.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>src</strong> (<em>str</em>) – source directory path</li>
+<li><strong>dest</strong> (<em>str</em>) – not required to be passed</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DirectoryCleaner.DirectoryCleaner.change_files">
+<code class="descname">change_files</code><span class="sig-paren">(</span><em>files: list = None</em><span class="sig-paren">)</span><a class="headerlink" href="#DirectoryCleaner.DirectoryCleaner.change_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not required for this operation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>files</strong> – NA</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DirectoryCleaner.DirectoryCleaner.clean">
+<code class="descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#DirectoryCleaner.DirectoryCleaner.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all entries in the directory path, then deletes each file from
+underlying file system.
+If remove_subdirs it True, then files inside sub directories will be deleted too.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal notranslate"><span class="pre">Exception</span></code> – an Exception in case of file system issues</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Aditya Pant.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

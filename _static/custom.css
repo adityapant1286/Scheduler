@@ -1,0 +1,28 @@
+.alert-info {
+    color: #0c5460;
+    background-color: #f5f5f5;
+    border-color: #bee5eb;
+}
+
+div.admonition {
+    padding: 15px;
+}
+
+code {
+    background-color: transparent !important;
+    font-family: monospace, monospace !important;
+}
+
+.caption-text {
+    font-size: x-large;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.function, .method {
+/*    margin-bottom: 1.4em;*/
+    border-bottom: 1px solid #e0e0e0;
+/*    padding-bottom: 1em;*/
+}
