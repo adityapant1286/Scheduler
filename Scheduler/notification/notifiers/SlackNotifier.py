@@ -28,7 +28,7 @@ class SlackNotifier(Notifier):
                 Please refer `Slack - Basic message formatting <https://api.slack.com/docs/message-formatting />`_
 
         """
-        self._channel_urls = {'dont-hear-just-listen': 'https://hooks.slack.com/services/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'}
+        #self._channel_urls = {'dont-hear-just-listen': 'https://hooks.slack.com/services/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'}
         # self._channel_urls = {'com-bot': 'https://hooks.slack.com/services/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'}
         self._msg = msg
 
@@ -111,8 +111,8 @@ class SlackNotifier(Notifier):
 
         """
         self.clear_channels()
-        self._channel_urls = {
-            'dont-hear-just-listen': 'https://hooks.slack.com/services/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'}
+        #self._channel_urls = {
+        #    'dont-hear-just-listen': 'https://hooks.slack.com/services/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'}
         return self
 
     def notify(self):
